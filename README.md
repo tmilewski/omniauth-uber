@@ -1,7 +1,9 @@
 # omniauth-patreon
+## **This project is currently WIP**
 
 [![Gem Version](https://badge.fury.io/rb/omniauth-patreon.svg)](http://badge.fury.io/rb/omniauth-patreon)
 [![Build Status](https://travis-ci.org/signalnerve/omniauth-patreon.svg?branch=master)](https://travis-ci.org/signalnerve/omniauth-patreon)
+
 
 Patreon OAuth2 Strategy for OmniAuth 1.x and supports the OAuth 2.0 server-side flow.
 
