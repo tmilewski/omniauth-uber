@@ -6,7 +6,7 @@ require 'simplecov'
 SimpleCov.start
 
 require 'omniauth'
-require 'omniauth-uber'
+require 'omniauth-patreon'
 
 RSpec.configure do |config|
   config.extend OmniAuth::Test::StrategyMacros, type: :strategy

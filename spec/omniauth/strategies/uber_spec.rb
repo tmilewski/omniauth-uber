@@ -1,29 +1,29 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::Uber do
+describe OmniAuth::Strategies::Patreon do
   subject do
     @subject ||= begin
       @options ||= {}
       args = ['client_id', 'client_secret', @options].compact
-      OmniAuth::Strategies::Uber.new(*args)
+      OmniAuth::Strategies::Patreon.new(*args)
     end
   end
 
   context 'client options' do
     it 'should have correct name' do
-      expect(subject.options.name).to eq('uber')
+      expect(subject.options.name).to eq('patreon')
     end
 
     it 'should have correct site' do
-      expect(subject.options.client_options.site).to eq('https://api.uber.com')
+      expect(subject.options.client_options.site).to eq('https://www.patreon.com/api/oauth2/api')
     end
 
     it 'should have correct authorize url' do
-      expect(subject.options.client_options.authorize_url).to eq('https://login.uber.com/oauth/authorize')
+      expect(subject.options.client_options.authorize_url).to eq('https://patreon.com/oauth2/authorize')
     end
 
     it 'should have correct access token url' do
-      expect(subject.options.client_options.token_url).to eq('https://login.uber.com/oauth/token')
+      expect(subject.options.client_options.token_url).to eq('https://patreon.com/api/oauth2/token')
     end
 
     it 'should indicate that the provider ignores the state parameted' do
