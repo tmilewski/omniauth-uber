@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'omniauth/uber/version'
+require 'omniauth/patreon/version'
 
 Gem::Specification.new do |s|
-  s.name          = 'omniauth-uber'
-  s.version       = OmniAuth::Uber::VERSION
-  s.authors       = ['Tom Milewski']
-  s.email         = ['tmilewski@gmail.com']
-  s.summary       = 'Uber strategy for OmniAuth'
-  s.description   = 'Uber strategy for OmniAuth v1.2'
-  s.homepage      = 'https://github.com/tmilewski/omniauth-uber'
+  s.name          = 'omniauth-patreon'
+  s.version       = OmniAuth::Patreon::VERSION
+  s.authors       = ['Kristian Freeman']
+  s.email         = ['kristian@bytesized.xyz']
+  s.summary       = 'Patreon strategy for OmniAuth'
+  s.description   = 'Patreon strategy for OmniAuth v1.2'
+  s.homepage      = 'https://github.com/tmilewski/omniauth-patreon'
   s.license       = 'MIT'
 
   s.files         = `git ls-files`.split("\n")

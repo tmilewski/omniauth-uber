@@ -2,12 +2,12 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class Uber < OmniAuth::Strategies::OAuth2
-      DEFAULT_SCOPE = 'profile'.freeze
+    class Patreon < OmniAuth::Strategies::OAuth2
+      DEFAULT_SCOPE = 'users pledges-to-me my-campaign'.freeze
 
-      option :client_options, site: 'https://api.uber.com',
-                              authorize_url: 'https://login.uber.com/oauth/authorize',
-                              token_url: 'https://login.uber.com/oauth/token'
+      option :client_options, site: 'https://www.patreon.com/api/oauth2/api',
+                              authorize_url: 'https://patreon.com/oauth2/authorize',
+                              token_url: 'https://patreon.com/api/oauth2/token'
 
       uid { raw_info['uuid'] }
 
@@ -28,7 +28,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/v1/me').parsed || {}
+        @raw_info ||= access_token.get('/current_user').parsed || {}
       end
 
       def request_phase
